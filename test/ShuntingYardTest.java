@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 
 /**
  *
@@ -11,7 +12,14 @@ import static org.junit.Assert.*;
  */
 public class ShuntingYardTest {
 
-    private final ShuntingYard algo = new ShuntingYard ();
+    private ShuntingYard algo;
+    private Pattern numberRegexPattern;
+    
+    @Before
+    public void setup() {
+        numberRegexPattern = Pattern.compile ( "[0-9]+|um[1-9][0-9]*" );
+        algo = new ShuntingYard (numberRegexPattern);
+    }
 
     @Test
     public void validPositiveNumbersRegexTest () {

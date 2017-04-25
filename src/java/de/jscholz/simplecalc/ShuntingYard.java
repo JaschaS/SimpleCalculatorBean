@@ -15,24 +15,9 @@ public class ShuntingYard {
     private final Pattern numberRegexPattern;
     private Matcher numberRegexMatcher;
     
-    public ShuntingYard() {
-        
-        /* To detect if the substring is a number or an operator,
-         * the following regex is been used.
-         * 
-         * [0-9]+ => checks if the number is only positive
-         * 
-         * um[1-9][0-9]* => checks a negative number.
-         * um defines the unary minus.
-         * After the unary minus follows a number [1-9]. By definition
-         * zero can't be negative.
-         * [0-9]* is for more digits.
-         * 
-         * Note: the unary minus is only needed at the beginning of a
-         * expression.
-         */
-        numberRegexPattern = Pattern.compile ( "[0-9]+|um[1-9][0-9]*" );
-        numberRegexMatcher = null;
+    public ShuntingYard(final Pattern numberPattern) {
+        this.numberRegexPattern = numberPattern;
+        this.numberRegexMatcher = null;
     }
     
     public Pattern getNumberRegex() {
