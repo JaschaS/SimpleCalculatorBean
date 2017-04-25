@@ -1,7 +1,6 @@
 
 import de.jscholz.simplecalc.PostFixEvaluation;
 import de.jscholz.simplecalc.ShuntingYard;
-import java.util.regex.Pattern;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -12,14 +11,13 @@ import org.junit.Before;
  */
 public class PostFixEvaluationTest {
     
-    private PostFixEvaluation evaluation = new PostFixEvaluation ();
+    private PostFixEvaluation evaluation;
     private ShuntingYard algo;
-    private Pattern numberRegexPattern;
     
     @Before
     public void setup() {
-        numberRegexPattern = Pattern.compile ( "[0-9]+|um[1-9][0-9]*" );
-        algo = new ShuntingYard (numberRegexPattern);
+        evaluation = new PostFixEvaluation ();
+        algo = new ShuntingYard ();
     }
     
     @Test

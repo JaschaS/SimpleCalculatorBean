@@ -13,12 +13,10 @@ import org.junit.Before;
 public class ShuntingYardTest {
 
     private ShuntingYard algo;
-    private Pattern numberRegexPattern;
     
     @Before
     public void setup() {
-        numberRegexPattern = Pattern.compile ( "[0-9]+|um[1-9][0-9]*" );
-        algo = new ShuntingYard (numberRegexPattern);
+        algo = new ShuntingYard ();
     }
 
     @Test
