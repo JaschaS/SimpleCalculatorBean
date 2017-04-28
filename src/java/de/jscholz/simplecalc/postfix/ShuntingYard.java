@@ -1,4 +1,4 @@
-package de.jscholz.simplecalc;
+package de.jscholz.simplecalc.postfix;
 
 import java.util.Stack;
 import java.util.regex.Matcher;

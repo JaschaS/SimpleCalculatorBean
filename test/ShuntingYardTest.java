@@ -1,5 +1,5 @@
 
-import de.jscholz.simplecalc.ShuntingYard;
+import de.jscholz.simplecalc.postfix.ShuntingYard;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.junit.Test;

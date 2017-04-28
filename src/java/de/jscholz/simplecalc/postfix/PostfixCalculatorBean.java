@@ -1,18 +1,19 @@
-package de.jscholz.simplecalc;
+package de.jscholz.simplecalc.postfix;
 
+import de.jscholz.simplecalc.PostFixCalculator;
 import javax.ejb.Stateless;
 
 /**
  *
  * @author JScholz
  */
-@Stateless(name="SimpleCalcBean")
-public class SimpleCalculatorBean implements SimpleCalculator {
+@Stateless(name="PostfixCalcBean")
+public class PostfixCalculatorBean implements PostFixCalculator {
 
     private final ShuntingYard postFixGenerator;
     private final PostFixEvaluation evaluator;
     
-    public SimpleCalculatorBean() {
+    public PostfixCalculatorBean() {
         
         this.postFixGenerator = new ShuntingYard ();
         this.evaluator = new PostFixEvaluation ();

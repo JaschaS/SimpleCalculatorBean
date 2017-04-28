@@ -1,6 +1,6 @@
 
-import de.jscholz.simplecalc.PostFixEvaluation;
-import de.jscholz.simplecalc.ShuntingYard;
+import de.jscholz.simplecalc.postfix.PostFixEvaluation;
+import de.jscholz.simplecalc.postfix.ShuntingYard;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
